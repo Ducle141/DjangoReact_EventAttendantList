@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     #New addtion
     'rest_framework',
     'corsheaders',
-    'students',
+    'students'
 ]
 
 MIDDLEWARE = [
@@ -56,9 +56,9 @@ MIDDLEWARE = [
     #New Addition
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
-    # CORS_ORIGIN_ALLOW_ALL = True,
-
 ]
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = 'django_react_proj.urls'
 
