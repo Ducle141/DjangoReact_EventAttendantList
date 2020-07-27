@@ -16,17 +16,17 @@ class Home extends Component {
     this.resetState();
   }
 
-  getStudents = () => {
-    axios.get(API_URL).then((res) => this.setState({ students: res.data }));
-  };
-
   resetState = () => {
     this.getStudents();
   };
 
+  getStudents = () => {
+    axios.get(API_URL).then((res) => this.setState({ students: res.data }));
+  };
+
   render() {
     return (
-      <Container style={{ marginTop: "20px" }}>
+      <Container style={{ marginTop: "30px" }}>
         <Row>
           <Col>
             <StudentList

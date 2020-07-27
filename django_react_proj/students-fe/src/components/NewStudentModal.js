@@ -32,7 +32,7 @@ class NewStudentModal extends Component {
         </Button>
       );
     }
-
+    // isOpen means: default value of modal is False, whenever it is clicked, it changes to true.
     return (
       <Fragment>
         {button}
