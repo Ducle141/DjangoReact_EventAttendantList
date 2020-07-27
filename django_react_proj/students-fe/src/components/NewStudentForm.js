@@ -9,15 +9,15 @@ class NewStudentForm extends React.Component {
   state = {
     pk: 0,
     name: "",
-    email: "",
-    document: "",
     phone: "",
+    email: "",
+    note: "",
   };
 
   componentDidMount() {
     if (this.props.student) {
-      const { pk, name, document, email, phone } = this.props.student;
-      this.setState({ pk, name, document, email, phone });
+      const { pk, name, phone, email, note } = this.props.student;
+      this.setState({ pk, name, phone, email, note });
     }
   }
 
@@ -60,6 +60,15 @@ class NewStudentForm extends React.Component {
           />
         </FormGroup>
         <FormGroup>
+          <Label for="phone">Phone:</Label>
+          <Input
+            type="text"
+            name="phone"
+            onChange={this.onChange}
+            value={this.defaultIfEmpty(this.state.phone)}
+          />
+        </FormGroup>
+        <FormGroup>
           <Label for="email">Email:</Label>
           <Input
             type="email"
@@ -69,21 +78,12 @@ class NewStudentForm extends React.Component {
           />
         </FormGroup>
         <FormGroup>
-          <Label for="document">Document:</Label>
+          <Label for="note">Note:</Label>
           <Input
             type="text"
-            name="document"
+            name="note"
             onChange={this.onChange}
-            value={this.defaultIfEmpty(this.state.document)}
-          />
-        </FormGroup>
-        <FormGroup>
-          <Label for="phone">Phone:</Label>
-          <Input
-            type="text"
-            name="phone"
-            onChange={this.onChange}
-            value={this.defaultIfEmpty(this.state.phone)}
+            value={this.defaultIfEmpty(this.state.note)}
           />
         </FormGroup>
         <Button>Send</Button>
