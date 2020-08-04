@@ -13,9 +13,9 @@ class StudentList extends Component {
           <tr>
             <th>Name</th>
             <th>Email</th>
-            <th>Document</th>
             <th>Phone</th>
             <th>Registration</th>
+              <th>Major</th>
             <th></th>
           </tr>
         </thead>
@@ -31,9 +31,9 @@ class StudentList extends Component {
               <tr key={student.pk}>
                 <td>{student.name}</td>
                 <td>{student.email}</td>
-                <td>{student.document}</td>
                 <td>{student.phone}</td>
                 <td>{student.registrationDate}</td>
+                  <td>{student.major}</td>
                 <td align="center">
                   <NewStudentModal
                     create={false}

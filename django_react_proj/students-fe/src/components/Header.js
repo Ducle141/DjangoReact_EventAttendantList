@@ -5,13 +5,13 @@ class Header extends Component {
     return (
       <div className="text-center">
         <img
-          src="https://logrocket-assets.io/img/logo.png"
-          width="300"
+          src="https://triumph-foundation.org/wp-content/uploads/Untitled-design1.jpg"
+          width="700"
           className="img-thumbnail"
           style={{ marginTop: "20px" }}
         />
         <hr />
-        <h1>My Personal Contact List</h1>
+        <h1>Event Attendant List</h1>
       </div>
     );
   }
