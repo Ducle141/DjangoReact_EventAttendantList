@@ -17,7 +17,11 @@ class Home extends Component {
   }
 
   getStudents = () => {
-    axios.get(API_URL).then((res) => this.setState({ students: res.data }));
+    axios.get(API_URL).then((res) =>
+      this.setState({
+        students: res.data.sort((a, b) => a.name.localeCompare(b.name)),
+      })
+    );
   };
 
   resetState = () => {
