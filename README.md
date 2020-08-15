@@ -1,3 +1,6 @@
+## Introduction
+A web application that allows Event host manage attendant list. This app is built by Django and React Framework.
+
 ## Run Project
 
 in root directory run this command :
